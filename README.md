@@ -15,6 +15,13 @@
 Here is the list of queries you can run in supabase SQL editor:
 <details>
 <summary>Create Courses Table</summary>
+  CREATE TABLE courses (
+    id bigint primary key generated always as identity,
+    title text NOT NULL,
+    description text,
+    category text,
+    price numeric
+) WITH (OIDS=FALSE);
   ```
     INSERT INTO courses (title, description, category, price)
   VALUES 
